@@ -25,6 +25,9 @@ while game_is_on:
     for seg in segments:
         seg.forward(20)
 
+
+screen.exitonclick()
+
 # TODO: 1. Create a snake body
 # segment_1 = Turtle('square')
 # segment_1.color('white')
@@ -48,6 +51,3 @@ while game_is_on:
 # TODO: 5. Create a scoreboard
 # TODO: 6. Detect collision with wall
 # TODO: 7. Detect collision with tail
-
-
-screen.exitonclick()
