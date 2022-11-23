@@ -23,12 +23,15 @@ game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.1)
-
     snake.move()
 
-    # for seg_num in range(start=2, stop=0, step=-1):
-    # segments[seg_num] = goto.xcor()
-    # segments[seg_num] = goto
+    # Detech collision with food
+    if snake.head.distance(food) < 15:
+        food.refresh()
+
+        # for seg_num in range(start=2, stop=0, step=-1):
+        # segments[seg_num] = goto.xcor()
+        # segments[seg_num] = goto
 
 
 screen.exitonclick()
