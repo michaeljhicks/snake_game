@@ -33,6 +33,11 @@ while game_is_on:
         food.refresh()
         scoreboard.increase_score()
 
+    # Detect collision with wall
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        game_is_on = False
+        scoreboard.game_over()
+
         # for seg_num in range(start=2, stop=0, step=-1):
         # segments[seg_num] = goto.xcor()
         # segments[seg_num] = goto
