@@ -1,6 +1,7 @@
 from turtle import Screen
 from snake import Snake
 from food import Food
+from scoreboard import Scoreboard
 import time
 
 
@@ -12,6 +13,7 @@ screen.tracer(0)
 
 snake = Snake()
 food = Food()
+scoreboard = Scoreboard()
 
 # key presses
 screen.listen()
@@ -29,6 +31,7 @@ while game_is_on:
     # Detech collision with food
     if snake.head.distance(food) < 15:
         food.refresh()
+        scoreboard.increase_score()
 
         # for seg_num in range(start=2, stop=0, step=-1):
         # segments[seg_num] = goto.xcor()
