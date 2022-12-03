@@ -1,4 +1,4 @@
-from turtle import *
+from turtle import Turtle
 
 
 class Scoreboard(Turtle):
@@ -7,4 +7,4 @@ class Scoreboard(Turtle):
         super().__init__()
         self.score = 0
         self.write(f"Score: {self.score}", align="center",
-                   font='Arial, 24, normal')
+                   font=('Arial', 24, 'normal'))
