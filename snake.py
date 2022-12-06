@@ -27,6 +27,7 @@ class Snake:
     def reset_snake(self):
         self.segments.clear()
         self.create_snake()
+        self.head = self.segments[0]
 
     def extend(self):
         '''extend a new segment to the snake'''
